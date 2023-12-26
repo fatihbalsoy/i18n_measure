@@ -1,11 +1,11 @@
 name: i18n_measure
 description: "A new Flutter plugin project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/fatihbalsoy/i18n_measure
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
-  flutter: '>=3.3.0'
+  sdk: ">=3.2.3 <4.0.0"
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:
