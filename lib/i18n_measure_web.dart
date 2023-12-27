@@ -24,9 +24,11 @@ class I18nMeasureWeb extends I18nMeasurePlatform {
     const imperialCountries = ["GB", "US", "MM", "LR"];
 
     final language = html.window.navigator.language;
-    String countryCode =
-        language.length >= 2 ? language.substring(language.length - 2) : '';
-    return imperialCountries.contains(countryCode)
+    bool isImperial = false;
+    for (var code in imperialCountries) {
+	isImperial = isImperial || language.contains(code);
+    }
+    return isImperial
         ? MeasurementSystem.imperial
         : MeasurementSystem.metric;
   }
