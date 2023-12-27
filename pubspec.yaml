@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
   plugin_platform_interface: ^2.0.2
 
 dev_dependencies:
@@ -45,6 +47,9 @@ flutter:
         pluginClass: I18nMeasurePlugin
       windows:
         pluginClass: I18nMeasurePluginCApi
+      web:
+        pluginClass: I18nMeasureWeb
+        fileName: i18n_measure_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

@@ -25,6 +25,7 @@ abstract class I18nMeasurePlatform extends PlatformInterface {
   }
 
   Future<MeasurementSystem?> getMeasurementSystem() {
-    throw UnimplementedError('measurementSystem() has not been implemented.');
+    throw UnimplementedError(
+        'getMeasurementSystem() has not been implemented.');
   }
 }
