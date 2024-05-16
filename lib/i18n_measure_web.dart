@@ -2,7 +2,7 @@
 // of your plugin as a separate package, instead of inlining it in the same
 // package as the core of your plugin.
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html show window;
+import 'package:web/web.dart' as web show window;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:i18n_measure/i18n_measure.dart';
@@ -23,13 +23,11 @@ class I18nMeasureWeb extends I18nMeasurePlatform {
   Future<MeasurementSystem?> getMeasurementSystem() async {
     const imperialCountries = ["GB", "US", "MM", "LR"];
 
-    final language = html.window.navigator.language;
+    final language = web.window.navigator.language;
     bool isImperial = false;
     for (var code in imperialCountries) {
-	isImperial = isImperial || language.contains(code);
+      isImperial = isImperial || language.contains(code);
     }
-    return isImperial
-        ? MeasurementSystem.imperial
-        : MeasurementSystem.metric;
+    return isImperial ? MeasurementSystem.imperial : MeasurementSystem.metric;
   }
 }
